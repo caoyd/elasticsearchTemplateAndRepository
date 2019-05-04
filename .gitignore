@@ -1,0 +1,50 @@
+# should include this file
+!.mvn/wrapper/maven-wrapper.jar
+
+# Mac OSX
+.DS_Store 
+
+# Intellij idea
+*.iml
+*.ipr
+*.iws
+.idea/
+
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata
+
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+*.log.*
+
+
+# Package Files 
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+
+# temporary build files
+target/
+out/
+build/
+bin/
+
+
+/.idea/
+/.mvn/
+/target/
+/mvnw
+/mvnw.cmd
+/.gitignore
