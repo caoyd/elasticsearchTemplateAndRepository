@@ -1,21 +1,23 @@
-//ÉèÖÃappkeyºÍÃÜÔ¿(seckey)
+open.1688.comå¼€å‘å¹³å°SDK APIè°ƒç”¨!
+
+//è®¾ç½®appkeyå’Œå¯†é’¥(seckey)
 ApiExecutor apiExecutor = new ApiExecutor("appKey","secKey"); 
 
-//¹¹ÔìAPIÈë²ÎºÍ³ö²Î
-//API³öÈë²ÎÀàÃüÃû¹æÔò£ºAPIÃû³ÆÃ¿¸öµ¥´ÊÊ××ÖÄ¸´óĞ´£¬²¢È¥µô·Ö¸ô·û£¨¡°.¡±£©£¬
-//Ä©Î²¼ÓÉÏParam£¨»òResult£©£¬ÆäÖĞParamÎªÈë²Î¡¢ResultÎª³ö²Î
-//ÒÔ´´½¨¶©µ¥APIÎªÀı£¬APIÃû³Æ£ºalibaba.trade.fastCreateOrder
+//æ„é€ APIå…¥å‚å’Œå‡ºå‚
+//APIå‡ºå…¥å‚ç±»å‘½åè§„åˆ™ï¼šAPIåç§°æ¯ä¸ªå•è¯é¦–å­—æ¯å¤§å†™ï¼Œå¹¶å»æ‰åˆ†éš”ç¬¦ï¼ˆâ€œ.â€ï¼‰ï¼Œ
+//æœ«å°¾åŠ ä¸ŠParamï¼ˆæˆ–Resultï¼‰ï¼Œå…¶ä¸­Paramä¸ºå…¥å‚ã€Resultä¸ºå‡ºå‚
+//ä»¥åˆ›å»ºè®¢å•APIä¸ºä¾‹ï¼ŒAPIåç§°ï¼šalibaba.trade.fastCreateOrder
 
 AlibabatradefastCreateOrderParam param = new AlibabatradefastCreateOrderParam(); 
-param.setFlow("general");//´óÊĞ³¡ÆÕÍ¨¶©µ¥£ºgeneral
-param.setMessage("ÕâÀïÊÇÂò¼ÒÁôÑÔ"); 
+param.setFlow("general");//å¤§å¸‚åœºæ™®é€šè®¢å•ï¼šgeneral
+param.setMessage("è¿™é‡Œæ˜¯ä¹°å®¶ç•™è¨€"); 
 
 Alibabatradefastaddress address = new Alibabatradefastaddress(); 
-address.setProvinceText("Õã½­Ê¡"); 
-address.setCityText("º¼ÖİÊĞ"); 
-address.setAreaText("±õ½­Çø"); 
-address.setAddress("ÍøÉÌÂ·699ºÅ"); 
-address.setFullName("ÕÅÈı"); 
+address.setProvinceText("æµ™æ±Ÿçœ"); 
+address.setCityText("æ­å·å¸‚"); 
+address.setAreaText("æ»¨æ±ŸåŒº"); 
+address.setAddress("ç½‘å•†è·¯699å·"); 
+address.setFullName("å¼ ä¸‰"); 
 address.setMobile("13988888888"); 
 address.setPostCode("888888"); 
 param.setAddressParam(address); 
@@ -28,10 +30,10 @@ cargo.setQuantity(5D);
 cargoList.add(cargo); 
 param.setCargoParamList(cargoList.toArray(new Alibabatradefastcargo[]{})); 
 
-//µ÷ÓÃAPI²¢»ñÈ¡·µ»Ø½á¹û
+//è°ƒç”¨APIå¹¶è·å–è¿”å›ç»“æœ
 AlibabatradefastCreateOrderResult result = apiExecutor.execute(param,"accessToken"); 
 
-//¶Ô·µ»Ø½á¹û½øĞĞ²Ù×÷
+//å¯¹è¿”å›ç»“æœè¿›è¡Œæ“ä½œ
 if (result.getSuccess()) 
 { 
     String orderId = result.getResult().getOrderId();
